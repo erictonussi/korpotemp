@@ -6,3 +6,15 @@
   // background-color: red;
   // background-color: green;
 }
+
+[flex-center] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    &.overflow-scroll > .scroll {
+      width: initial;
+      height: initial;
+    }
+}

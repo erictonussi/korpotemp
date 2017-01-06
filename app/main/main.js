@@ -11,11 +11,19 @@ angular.module('main', [
   $urlRouterProvider.otherwise('/login');
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
-    .state('login', {
-      url: '/login',
-      // abstract: true,
-      templateUrl: 'main/pages/login/login.html'
-    })
+    // .state('login', {
+    //   url: '/login',
+    //   // abstract: true,
+    //   templateUrl: 'main/pages/login/login.html',
+    //   controller: 'LoginCtrl'
+    // })
+    // .state('register', {
+    //   url: '/register',
+    //   // abstract: true,
+    //   templateUrl: 'main/pages/register/register.html',
+    //   controller: 'RegisterCtrl'
+    // })
+
     .state('main', {
       url: '/main',
       abstract: true,
@@ -26,15 +34,6 @@ angular.module('main', [
       views: {
         'tab-list': {
           templateUrl: 'main/templates/list.html',
-          // controller: 'SomeCtrl as ctrl'
-        }
-      }
-    })
-    .state('main.user', {
-      url: '/user',
-      views: {
-        'tab-user': {
-          templateUrl: 'main/templates/user.html',
           // controller: 'SomeCtrl as ctrl'
         }
       }
@@ -56,5 +55,15 @@ angular.module('main', [
           controller: 'DebugCtrl as ctrl'
         }
       }
-    });
+    })
+    .state('main.config', {
+      url: '/config',
+      views: {
+        'tab-config': {
+          templateUrl: 'main/pages/config/config.html',
+          controller: 'DebugCtrl as ctrl'
+        }
+      }
+    })
+  ;
 });

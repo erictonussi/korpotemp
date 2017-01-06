@@ -13,7 +13,7 @@ var paths = gulp.paths = {
   jsonFiles: ['app/**/*.json', '!app/bower_components/**/*.json'],
   scssFiles: ['app/**/*.scss'],
   cssFiles: ['.tmp/**/*.css'],
-  templates: ['app/*/templates/**/*'],
+  templates: ['app/**/*.html', '!app/bower_components/**/*.html'],
   contrib: ['gulpfile.js', 'gulp/**/*.js', 'hooks/**/*.js'],
   karma: ['test/karma/**/*.js'],
   protractor: ['test/protractor/**/*.js']
