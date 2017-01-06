@@ -1,3 +1,7 @@
+<ion-nav-bar class="bar-calm">
+  <ion-nav-back-button></ion-nav-back-button>
+</ion-nav-bar>
+
 <ion-tabs class="tabs-icon-top tabs-assertive">
 
   <!-- List Tab -->
@@ -10,6 +14,12 @@
   <ion-tab title="Debug" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear"
     ui-sref="main.debug">
     <ion-nav-view name="tab-debug"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Debug Tab -->
+  <ion-tab title="Config" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear"
+    ui-sref="main.config">
+    <ion-nav-view name="tab-config"></ion-nav-view>
   </ion-tab>
 
 </ion-tabs>

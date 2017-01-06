@@ -8,39 +8,53 @@ angular.module('main', [
 .config(function ($stateProvider, $urlRouterProvider) {
 
   // ROUTING with ui.router
-  $urlRouterProvider.otherwise('/main/list');
+  $urlRouterProvider.otherwise('/login');
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
+    .state('login', {
+      url: '/login',
+      // abstract: true,
+      templateUrl: 'main/pages/login/login.html'
+    })
     .state('main', {
       url: '/main',
       abstract: true,
       templateUrl: 'main/templates/tabs.html'
     })
-      .state('main.list', {
-        url: '/list',
-        views: {
-          'tab-list': {
-            templateUrl: 'main/templates/list.html',
-            // controller: 'SomeCtrl as ctrl'
-          }
+    .state('main.list', {
+      url: '/list',
+      views: {
+        'tab-list': {
+          templateUrl: 'main/templates/list.html',
+          // controller: 'SomeCtrl as ctrl'
         }
-      })
-      .state('main.listDetail', {
-        url: '/list/detail',
-        views: {
-          'tab-list': {
-            templateUrl: 'main/templates/list-detail.html',
-            // controller: 'SomeCtrl as ctrl'
-          }
+      }
+    })
+    .state('main.user', {
+      url: '/user',
+      views: {
+        'tab-user': {
+          templateUrl: 'main/templates/user.html',
+          // controller: 'SomeCtrl as ctrl'
         }
-      })
-      .state('main.debug', {
-        url: '/debug',
-        views: {
-          'tab-debug': {
-            templateUrl: 'main/templates/debug.html',
-            controller: 'DebugCtrl as ctrl'
-          }
+      }
+    })
+    .state('main.listDetail', {
+      url: '/list/detail',
+      views: {
+        'tab-list': {
+          templateUrl: 'main/templates/list-detail.html',
+          // controller: 'SomeCtrl as ctrl'
         }
-      });
+      }
+    })
+    .state('main.debug', {
+      url: '/debug',
+      views: {
+        'tab-debug': {
+          templateUrl: 'main/templates/debug.html',
+          controller: 'DebugCtrl as ctrl'
+        }
+      }
+    });
 });

@@ -31,18 +31,30 @@ gulp.task('inject-all', ['styles', 'wiredep', 'bower-fonts', 'environment', 'bui
         }))
     .pipe(gulp.dest('app'));
 });
+gulp.task('inject-scss', function () {
+
+  return gulp.src('app/main/main.scss')
+    .pipe($.inject(gulp.src(['app/main/*/**/*.scss']), {
+      starttag: '// inject:{{ext}}',
+      endtag: '// endinject',
+      transform: function (filepath) {
+        return '@import "' + filepath.replace('/app/main/','') + '";';
+      }
+    }))
+    .pipe(gulp.dest('app/main'));
+});
 
 // build styles to tmp
 gulp.task('styles', ['clean'], function () {
 
   // compile css starting from each module's scss
-  return gulp.src('app/*/styles/!(_)*.scss')
+  return gulp.src('app/main/main.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync().on('error', $.sass.logError))
     .pipe($.sourcemaps.write())
     .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false}))
-    .pipe(gulp.dest('.tmp/'));
+    .pipe(gulp.dest('.tmp/main'));
 });
 
 // inject bower components into index.html
@@ -50,7 +62,7 @@ gulp.task('wiredep', function () {
 
   return gulp.src('app/index.html')
     // exclude ionic scss since we're using ionic sass
-    .pipe(wiredep.stream({exclude: ['bower_components/ionic/release/css']}))
+    .pipe(wiredep.stream(/*{exclude: ['bower_components/ionic/release/css']}*/))
     .pipe(gulp.dest('app/'));
 });
 

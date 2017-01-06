@@ -12,19 +12,8 @@ var bsInit = function (paths, openOverride) {
     server: {
       baseDir: paths
     },
-    // injectFileTypes: ["css"],
-    // middleware: function (req, res, next) {
-    //     var parsed = require("url").parse(req.url);
-    //     if (parsed.pathname.match(/\.css/)) {
-    //         // return less(parsed.pathname).then(function (o) {
-    //             res.setHeader("Content-Type", "text/css");
-    //             res.end(parsed.pathname);
-    //         // });
-    //     }
-    //     next();
-    // }
+    notify: false
   };
-  console.log(bsOptions);
   
   if (options.proxy) {
     var url = require('url');
@@ -77,7 +66,17 @@ gulp.task('watch', ['inject-all'], function () {
     }
   });
   // watch for changes in scss
-  gulp.watch(paths.scssFiles, ['styles']);
+  gulp.watch(paths.scssFiles, function (event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    if (event.type === 'changed') {
+      // bs.reload();
+      gulp.start('styles');
+    }
+    else { // added or deleted
+      // inject in index (implicitly reloads)
+      gulp.start('inject-scss');
+    }
+  });
   // watch for changes in css
   gulp.watch(paths.cssFiles, function () {
     gulp.src(paths.cssFiles).pipe(bs.stream());
