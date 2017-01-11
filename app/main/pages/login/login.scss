@@ -1,12 +1,39 @@
 .login-page {
 
   .logo {
+    color: white;
     text-align: center;
     font-size: 52px;
     margin-bottom: 50px;
+    text-shadow: 1px 1px 0px #333;
   }
 
   .login-form {
     width: 250px;
+
+    .item-input:first-of-type {
+      border-radius: 5px 5px 0 0;
+    }
+    .item-input:last-of-type {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+  .spacer {
+    color: white;
+    // text-shadow: 1px 1px 0px #333;
+    text-align: center;
+
+    hr {
+      width: 35%;
+      display: inline-block;
+      margin: 0px 5px;
+      margin: 3px 5px;
+      border: 0;
+      border-bottom: 1px solid white;
+    }
+  }
+  .register {
+    color: white;
+    // text-shadow: 1px 1px 0px white;
   }
 }

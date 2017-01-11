@@ -14,7 +14,7 @@ var bsInit = function (paths, openOverride) {
     },
     notify: false
   };
-  
+
   if (options.proxy) {
     var url = require('url');
     var proxyMiddleware = require('proxy-middleware');

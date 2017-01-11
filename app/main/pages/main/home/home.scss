@@ -1,0 +1,36 @@
+.home {
+	// h1 {
+	// 	margin: 0 0 2px 0;
+	// 	font-size: 22px;
+	// 	font-weight: 400;
+	// 	// font-weight: normal;
+	// }
+	// img:first-child {
+	// 	border-radius: 50%;
+	// 	box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+	// 	max-width: 70px;
+	// 	max-height: 70px;
+	// }
+
+	.current-temp {
+		color: #fff;
+		text-shadow: 1px 1px 2px black;
+		padding: 30px;
+
+		h3,
+		h4,
+		p {
+			margin: 0;
+			font-weight: 400;
+		}
+
+		.perfil {
+			float: right;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+		}
+	}
+
+}

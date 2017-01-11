@@ -31,8 +31,8 @@ gulp.task('inject-all', ['styles', 'wiredep', 'bower-fonts', 'environment', 'bui
         }))
     .pipe(gulp.dest('app'));
 });
-gulp.task('inject-scss', function () {
 
+gulp.task('inject-scss', function () {
   return gulp.src('app/main/main.scss')
     .pipe($.inject(gulp.src(['app/main/*/**/*.scss']), {
       starttag: '// inject:{{ext}}',

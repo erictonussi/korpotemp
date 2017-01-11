@@ -1,20 +1,32 @@
 // inject:scss
 @import "pages/login/login.scss";
+@import "pages/main/home/home.scss";
 // endinject
-
-* {
-  // background-color: red;
-  // background-color: green;
-}
 
 [flex-center] {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
     &.overflow-scroll > .scroll {
       width: initial;
       height: initial;
     }
+}
+
+
+/* ionic reset */
+
+ion-content {
+  background-color: #85cdcc;
+  background: linear-gradient(#11c1f3, #0a9dc7);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: inherit;
+}
+
+.tabs-striped .tabs {
+  border-bottom: 0;
 }
