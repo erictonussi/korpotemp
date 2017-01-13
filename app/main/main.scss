@@ -1,5 +1,6 @@
 // inject:scss
 @import "pages/login/login.scss";
+@import "pages/main/tabs.scss";
 @import "pages/main/home/home.scss";
 // endinject
 
@@ -18,9 +19,9 @@
 
 /* ionic reset */
 
-ion-content {
+ion-view {
   background-color: #85cdcc;
-  background: linear-gradient(#11c1f3, #0a9dc7);
+  background: linear-gradient(#5fc9c7, #29a997);
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {

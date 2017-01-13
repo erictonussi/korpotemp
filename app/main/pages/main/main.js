@@ -14,7 +14,7 @@ angular.module('main')
       views: {
         'tab-home': {
           templateUrl: 'main/pages/main/home/home.html',
-          // controller: 'SomeCtrl as ctrl'
+          controller: 'HomeCtrl as ctrl'
         }
       }
     })
@@ -42,7 +42,7 @@ angular.module('main')
       views: {
         'tab-config': {
           templateUrl: 'main/pages/main/config/config.html',
-          // controller: 'DebugCtrl as ctrl'
+          controller: 'ConfigCtrl as ctrl'
         }
       }
     });

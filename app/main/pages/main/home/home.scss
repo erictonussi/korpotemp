@@ -33,4 +33,13 @@
 		}
 	}
 
+	.platform-ios & .scroll {
+		height: 100%;
+	}
+	.chart {
+		position: absolute;
+		bottom: 0;
+
+	}
+
 }

@@ -47,7 +47,7 @@ var bsInit = function (paths, openOverride) {
 };
 
 // WATCH
-gulp.task('watch', ['inject-all'], function () {
+gulp.task('watch', ['inject-all','inject-scss'], function () {
 
   // browser sync server
   bsInit(['app', '.tmp']);
