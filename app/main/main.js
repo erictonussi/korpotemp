@@ -12,4 +12,8 @@ angular.module('main', [
 
   $ionicConfigProvider.tabs.position('bottom'); // other values: top
 
-});
+})
+
+.run(function ($rootScope, $state) {
+  $rootScope.$state = $state;
+})

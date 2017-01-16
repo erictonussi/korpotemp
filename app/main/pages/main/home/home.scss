@@ -1,16 +1,4 @@
 .home {
-	// h1 {
-	// 	margin: 0 0 2px 0;
-	// 	font-size: 22px;
-	// 	font-weight: 400;
-	// 	// font-weight: normal;
-	// }
-	// img:first-child {
-	// 	border-radius: 50%;
-	// 	box-shadow: 1px 1px 10px rgba(0,0,0,.5);
-	// 	max-width: 70px;
-	// 	max-height: 70px;
-	// }
 
 	.current-temp {
 		color: #fff;
@@ -24,22 +12,49 @@
 			font-weight: 400;
 		}
 
+		h3 {
+			font-size: 36px;
+		}
+
 		.perfil {
 			float: right;
-			width: 70px;
-			height: 70px;
+			width: 80px;
+			height: 80px;
 			border-radius: 50%;
 			box-shadow: 1px 1px 10px rgba(0,0,0,.5);
 		}
 	}
 
-	.platform-ios & .scroll {
+	/* .platform-ios */ & .scroll {
 		height: 100%;
 	}
-	.chart {
+
+	home-chart {
+		display: block;
 		position: absolute;
 		bottom: 0;
+		width: 100%;
 
+		.chart {
+			filter: drop-shadow(1px 1px 5px rgba(0,0,0,.2));
+		}
 	}
 
+	.thermomer-list {
+		// position: absolute;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+}
+
+.main-home {
+	.header-item {
+		width: 300px;
+	}
+	.bar {
+		background: none;
+	}
 }

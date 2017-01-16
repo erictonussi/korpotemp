@@ -4,3 +4,15 @@
 	background: none;
 	color: #fff;
 }
+
+.tabs-striped .tab-item.tab-item-active,
+.tabs-striped .tab-item.active,
+.tabs-striped .tab-item.activated {
+	margin-top: 0;
+	border: 0;
+}
+
+ion-header-bar .logo {
+  margin: 0;
+  // line-height: 34px;
+}

@@ -28,15 +28,26 @@ angular.module('main')
       }
     })
 
-    .state('main.debug', {
-      url: '/debug',
+    .state('main.charts', {
+      url: '/charts',
       views: {
-        'tab-debug': {
-          templateUrl: 'main/pages/main/debug/debug.html',
-          controller: 'DebugCtrl as ctrl'
+        'tab-charts': {
+          templateUrl: 'main/pages/main/charts/charts.html',
+          // controller: 'DebugCtrl as ctrl'
         }
       }
     })
+
+    // .state('main.debug', {
+    //   url: '/debug',
+    //   views: {
+    //     'tab-debug': {
+    //       templateUrl: 'main/pages/main/debug/debug.html',
+    //       controller: 'DebugCtrl as ctrl'
+    //     }
+    //   }
+    // })
+
     .state('main.config', {
       url: '/config',
       views: {
@@ -48,9 +59,9 @@ angular.module('main')
     });
 })
 
-.controller('LoginCtrl', function ($log, $scope) {
-  $scope.user = {
-    username: '',
-    password: ''
-  };
-});
+// .controller('LoginCtrl', function ($log, $scope) {
+//   $scope.user = {
+//     username: '',
+//     password: ''
+//   };
+// });
