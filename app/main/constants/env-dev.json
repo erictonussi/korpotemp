@@ -1,4 +1,11 @@
 {
   "SERVER_URL": "https://DEVSERVER/api",
-  "SOME_OTHER_URL": "/postman-proxy"
+  "SOME_OTHER_URL": "/postman-proxy",
+  "nomes": [
+    "Anthony Muniz",
+    "Alice Schumacher",
+    "Miguel Mazzaropi",
+    "Luna Monteiro"
+  ]
 }
+

@@ -8,10 +8,7 @@
   </div>
 </ion-header-bar> -->
 
-
-
-
-<ion-view view-title="" hide-nav-bar-="true" class="home">
+<ion-view view-title="" hide-nav-bar-="true" class="home-view">
   <!-- <ion-nav-bar class="bar-calm">
     <ion-nav-back-button></ion-nav-back-button>
   </ion-nav-bar> -->
@@ -24,9 +21,11 @@
   <ion-content>
 
     <div class="current-temp" ng-show="lastTemp" ng-click="chooseThermometer()">
-      <img src="main/assets/images/perfil.jpg" class="perfil">
+      <div class="perfil">
+        <img ng-src="main/assets/images/bebe-{{termometro+1}}.jpg" class="">
+      </div>
       <h3>{{lastTemp.temperatura | limitTo:4}}<sup>º</sup>C</h3>
-      <h4>Maria Luiza</h4>
+      <h4>{{nome}}</h4>
       <p>{{lastTemp.data | date:'h:mma (dd/MM/yyyy)'}}</p>
     </div>
 
@@ -34,7 +33,7 @@
       <li ng-repeat="message in messages">{{ message.temperatura }}</li>
     </ul> -->
 
-    <home-chart data="data"></home-chart>
+    <home-chart data="data" time-limit="48"></home-chart>
 
     <!-- <home-chart></home-chart> -->
 

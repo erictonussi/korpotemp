@@ -17,3 +17,4 @@ angular.module('main', [
 .run(function ($rootScope, $state) {
   $rootScope.$state = $state;
 })
+;

@@ -1,0 +1,13 @@
+.main.charts {
+  /* .platform-ios */ & .scroll {
+    min-height: 100%;
+    height: auto;
+
+    padding-bottom: 50%;
+  }
+
+  home-chart {
+    position: absolute;
+    bottom: 0px;
+  }
+}

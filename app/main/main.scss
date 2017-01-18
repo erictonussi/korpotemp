@@ -2,19 +2,20 @@
 @import "directives/home-chart.scss";
 @import "pages/login/login.scss";
 @import "pages/main/tabs.scss";
+@import "pages/main/charts/charts.scss";
 @import "pages/main/home/home.scss";
 // endinject
 
 [flex-center] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    &.overflow-scroll > .scroll {
-      width: initial;
-      height: initial;
-    }
+  &.overflow-scroll > .scroll {
+    width: initial;
+    height: initial;
+  }
 }
 
 
@@ -23,6 +24,12 @@
 ion-view {
   background-color: #85cdcc;
   background: linear-gradient(#5fc9c7, #29a997);
+
+  // scroll fix
+  .scroll {
+    padding-top: 1px;
+    margin-top: -1px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -35,4 +42,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .popup-body {
     padding: 0 10px;
+}
+
+.card, .list-inset {
+  margin: 10px;
+}
+
+.platform-ios input[type="date"] {
+  text-align: right;
+  padding-right: 60px;
 }

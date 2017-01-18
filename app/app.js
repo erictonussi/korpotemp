@@ -15,6 +15,7 @@ angular.module('korptemp', [
     // messagingSenderId: '<your-messaging-sender-id>'
   };
 
+  /*global firebase*/
   firebase.initializeApp(config);
 
 })

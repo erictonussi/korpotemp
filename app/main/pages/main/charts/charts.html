@@ -2,16 +2,28 @@
   <!-- <ion-nav-buttons side="right">
     <button menu-toggle="right" class="button button-icon icon ion-log-out"></button>
   </ion-nav-buttons> -->
-  <ion-content class="padding">
-      <label class="item item-input item-select">
-    <div class="input-label">
-      Lightsaber
-    </div>
-    <select>
-      <option>Blue</option>
-      <option selected>Green</option>
-      <option>Red</option>
-    </select>
-  </label>
+  <ion-content>
+    <ion-list type="card">
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          Termometro
+        </div>
+        <select ng-options="item as item for item in nomes" ng-model="filters.selected"></select>
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          Data inicial
+        </div>
+        <input type="date" name="inicial" placeholder="" ng-model="filters.inicial" ng-max="filters.final">
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          Data final
+        </div>
+        <input type="date" name="final" placeholder="" ng-model="filters.final" ng-min="filters.inicial" max="2017-01-18" required>
+      </ion-item>
+    </ion-list>
+
+    <home-chart data="data" time-limit="timeLimit" ng-if="data"></home-chart>
   </ion-content>
 </ion-view>

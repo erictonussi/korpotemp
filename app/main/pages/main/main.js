@@ -33,7 +33,7 @@ angular.module('main')
       views: {
         'tab-charts': {
           templateUrl: 'main/pages/main/charts/charts.html',
-          // controller: 'DebugCtrl as ctrl'
+          controller: 'ChartsCtrl as ctrl'
         }
       }
     })
