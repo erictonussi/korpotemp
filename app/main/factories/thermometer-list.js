@@ -5,9 +5,7 @@ angular.module('main')
   this.chooseThermometer = function() {
 
     var $scope = $rootScope.$new();
-    $scope.nomes = Config.ENV.nomes;
-
-    $scope.thermometers = [0,1,2,3];
+    $scope.thermometers = Config.ENV.thermometers;
 
     $scope.selectThermometer = function(thermometer) {
       alertPopup.close(thermometer);

@@ -11,20 +11,19 @@
   <ion-tabs class="tabs-icon-only tabs-transparent">
 
     <!-- List Tab -->
-    <ion-tab title="" icon="ion-thermometer"
-      ui-sref="main.home">
+    <ion-tab title="" icon="ion-thermometer" ui-sref="main.home">
       <ion-nav-view name="tab-home"></ion-nav-view>
     </ion-tab>
 
     <!-- Debug Tab -->
-    <ion-tab title="charts" icon="ion-ios-pulse"
-      ui-sref="main.charts">
+    <ion-tab title="charts" icon="ion-ios-pulse" ui-sref="main.charts">
       <ion-nav-view name="tab-charts"></ion-nav-view>
     </ion-tab>
 
+    <!-- <ion-tab title="charts" icon="ion-ios-pulse" ng-click="teste($event)"></ion-tab> -->
+
     <!-- Debug Tab -->
-    <ion-tab title="Config" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear"
-      ui-sref="main.config">
+    <ion-tab title="Config" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" ui-sref="main.config" on-select="alert(arguments)">
       <ion-nav-view name="tab-config"></ion-nav-view>
     </ion-tab>
 

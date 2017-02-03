@@ -1,5 +1,5 @@
 angular.module('main')
 
-.controller('ConfigCtrl', function ($scope, $timeout, $interval) {
+.controller('ConfigCtrl', function ($scope) {
 
 });

@@ -6,7 +6,9 @@ angular.module('main')
     .state('main', {
       url: '/main',
       abstract: true,
-      templateUrl: 'main/pages/main/tabs.html'
+      templateUrl: 'main/pages/main/tabs.html',
+      controller: function($scope){
+      }
     })
 
     .state('main.home', {
@@ -18,15 +20,15 @@ angular.module('main')
         }
       }
     })
-    .state('main.listDetail', {
-      url: '/home/detail',
-      views: {
-        'tab-home': {
-          templateUrl: 'main/pages/main/home/list-detail.html',
-          // controller: 'SomeCtrl as ctrl'
-        }
-      }
-    })
+    // .state('main.listDetail', {
+    //   url: '/home/detail',
+    //   views: {
+    //     'tab-home': {
+    //       templateUrl: 'main/pages/main/home/list-detail.html',
+    //       // controller: 'SomeCtrl as ctrl'
+    //     }
+    //   }
+    // })
 
     .state('main.charts', {
       url: '/charts',
@@ -56,7 +58,19 @@ angular.module('main')
           controller: 'ConfigCtrl as ctrl'
         }
       }
-    });
+    })
+
+    .state('main.configThemometers', {
+      url: '/config/detail',
+      views: {
+        'tab-config': {
+          templateUrl: 'main/pages/main/config/themometers/themometers.html',
+          controller: 'ConfigThermometersCtrl as ctrl'
+        }
+      }
+    })
+
+    ;
 })
 
 // .controller('LoginCtrl', function ($log, $scope) {

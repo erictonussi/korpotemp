@@ -1,11 +1,23 @@
 {
   "SERVER_URL": "https://DEVSERVER/api",
   "SOME_OTHER_URL": "/postman-proxy",
-  "nomes": [
-    "Anthony Muniz",
-    "Alice Schumacher",
-    "Miguel Mazzaropi",
-    "Luna Monteiro"
+  "thermometers": [
+    {
+      "id": 1,
+      "nome": "Anthony Muniz"
+    },
+    {
+      "id": 2,
+      "nome": "Alice Schumacher"
+    },
+    {
+      "id": 3,
+      "nome": "Miguel Mazzaropi"
+    },
+    {
+      "id": 4,
+      "nome": "Luna Monteiro"
+    }
   ]
 }
 

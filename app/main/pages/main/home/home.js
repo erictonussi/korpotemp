@@ -43,11 +43,12 @@ angular.module('main')
     },
   ];
 
-  updateData(0);
+  updateData(Config.ENV.thermometers[0]);
 
   $scope.chooseThermometer = function() {
     ThermometerList.chooseThermometer()
       .then(function(res) {
+
         if ( res === undefined ) return;
 
         updateData(res);
@@ -55,9 +56,11 @@ angular.module('main')
       });
   };
 
-  function updateData(seed) {
-    $scope.nome = Config.ENV.nomes[seed];
-    $scope.termometro = seed;
+  function updateData(thermometer) {
+
+    $scope.thermometer = thermometer;
+
+    var seed = thermometer.id;
 
     $scope.data = [
       {

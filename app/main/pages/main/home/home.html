@@ -22,10 +22,10 @@
 
     <div class="current-temp" ng-show="lastTemp" ng-click="chooseThermometer()">
       <div class="perfil">
-        <img ng-src="main/assets/images/bebe-{{termometro+1}}.jpg" class="">
+        <img ng-src="main/assets/images/bebe-{{thermometer.id}}.jpg" class="">
       </div>
       <h3>{{lastTemp.temperatura | limitTo:4}}<sup>º</sup>C</h3>
-      <h4>{{nome}}</h4>
+      <h4>{{thermometer.nome}}</h4>
       <p>{{lastTemp.data | date:'h:mma (dd/MM/yyyy)'}}</p>
     </div>
 

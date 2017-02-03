@@ -1,0 +1,14 @@
+<ion-view view-title="Termometros">
+
+  <ion-content class="padding-">
+
+    <ion-list type="card" class="thermometer-list">
+      <ion-item class="item-avatar" ng-repeat="thermometer in thermometers" ng-click="selectThermometer(thermometer)">
+        <img ng-src="main/assets/images/bebe-{{thermometer.id}}.jpg" class="">
+        <h2>{{thermometer.nome}}</h2>
+        <p>Breve descrição</p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

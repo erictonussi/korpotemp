@@ -1,10 +1,10 @@
 'use strict';
 angular.module('main')
 .controller('ChartsCtrl', function ($scope, Config) {
-  $scope.nomes = Config.ENV.nomes;
+  $scope.thermometers = Config.ENV.thermometers;
 
   $scope.filters = {
-    selected: $scope.nomes[0],
+    selected: Config.ENV.thermometers[0],
     inicial: new Date(+moment().add(-7,'d')),
     final: new Date(+moment()),
   };
@@ -25,7 +25,7 @@ angular.module('main')
     var dateDiff = filters.final - filters.inicial;
 
     for (var i = 0; i <= dateDiff; i += 60 * 60 * 1000 ) {
-      last += random(final - i)/2 - .25;
+      last += random(final - i + filters.selected.id)/2 - .25;
 
       data.push({
         x: new Date( final - i ),

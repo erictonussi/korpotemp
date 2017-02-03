@@ -4,24 +4,24 @@
   </ion-nav-buttons> -->
   <ion-content>
     <ion-list type="card">
-      <ion-item class="item-input item-select">
+      <label class="item item-input item-select">
         <div class="input-label">
           Termometro
         </div>
-        <select ng-options="item as item for item in nomes" ng-model="filters.selected"></select>
-      </ion-item>
-      <ion-item class="item-input item-select">
+        <select ng-options="item as item.nome for item in thermometers track by item.id" ng-model="filters.selected"></select>
+      </label>
+      <label class="item item-input">
         <div class="input-label">
           Data inicial
         </div>
         <input type="date" name="inicial" placeholder="" ng-model="filters.inicial" ng-max="filters.final">
-      </ion-item>
-      <ion-item class="item-input item-select">
+      </label>
+      <label class="item item-input">
         <div class="input-label">
           Data final
         </div>
-        <input type="date" name="final" placeholder="" ng-model="filters.final" ng-min="filters.inicial" max="2017-01-18" required>
-      </ion-item>
+        <input type="date" name="final" placeholder="" ng-model="filters.final" ng-min="filters.inicial" max="2017-01-19" required>
+      </label>
     </ion-list>
 
     <home-chart data="data" time-limit="timeLimit" ng-if="data"></home-chart>
