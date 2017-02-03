@@ -7,16 +7,16 @@ angular.module('korptemp', [
 ])
 .config( function () {
 
-  var config = {
-    apiKey: 'AIzaSyAU95lF-SauY6hBoxmDLGbMD586Zk6XBrQ',
-    authDomain: 'korptemp.firebaseio.com',
-    databaseURL: 'https://korptemp.firebaseio.com',
-    storageBucket: 'korptemp',
-    // messagingSenderId: '<your-messaging-sender-id>'
-  };
+  // var config = {
+  //   apiKey: 'AIzaSyAU95lF-SauY6hBoxmDLGbMD586Zk6XBrQ',
+  //   authDomain: 'korptemp.firebaseio.com',
+  //   databaseURL: 'https://korptemp.firebaseio.com',
+  //   storageBucket: 'korptemp',
+  //   // messagingSenderId: '<your-messaging-sender-id>'
+  // };
 
   /*global firebase*/
-  firebase.initializeApp(config);
+  // firebase.initializeApp(config);
 
 })
 ;
